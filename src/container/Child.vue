@@ -1,0 +1,44 @@
+<template>
+    <div class="child">
+        <p>{{data}}</p>
+        <p>{{message | capitalize}}</p>
+        <button @click="sendParent">goPraent</button>
+    </div>
+</template>
+<script>
+export default {
+  name: "Child",
+  data() {
+    return {
+      data: "jhuang"
+    };
+  },
+  props: {
+    message: {
+      type: String,
+      default: ""
+    }
+  },
+  filters: {
+    capitalize: function(value) {
+      if (!value) return "";
+      value = value.toString();
+      return value.charAt(0).toUpperCase() + value.slice(1);
+    }
+  },
+  methods: {
+    sendParent() {
+      this.$emit("listenTochild", this.data);
+    }
+  }
+};
+</script>
+<style scoped>
+.child {
+  width: 400px;
+  height: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+</style>
+
