@@ -20,6 +20,7 @@ export default {
     }
   },
   filters: {
+    //过滤器
     capitalize: function(value) {
       if (!value) return "";
       value = value.toString();
@@ -39,6 +40,7 @@ export default {
   height: 30px;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 50px;
 }
 </style>
 

@@ -30,11 +30,15 @@ export default {
       });
       console.log(result);
       if (!result) {
-        this.$message("请求失败");
+        this.$message({
+          showClose: false,
+          center: true,
+          message: "请求失败"
+        });
       } else if (result.data.success) {
         this.$router.push(`/home/${555}`);
         // this.$router.push({
-        //   path: `/home/${555}`,
+        //   path: `/home/${555}`,·
         //   query: {
         //     keyword:this.email
         //   }
