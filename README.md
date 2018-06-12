@@ -21,6 +21,6 @@ npm test
 ```
 
 # serve 
-cd build
+cd dist
 serve
 
