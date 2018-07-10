@@ -13,10 +13,12 @@ export default {
   props: {
     // 验证类型
     id: {
-      type: String
+      type: String,
+      default: ""
     },
     option: {
-      type: Object
+      type: Object,
+      default: {}
     }
   },
   mounted() {

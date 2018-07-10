@@ -47,7 +47,7 @@ export default {
       id: "test",
       option: {
         title: {
-          text: "highcharts-demo"
+          text: "chart-highcharts-demo"
         },
         credits: {
           enabled: false
@@ -114,7 +114,7 @@ export default {
     // console.log(this.$route.params.id);
     HighCharts.chart("chart", {
       title: {
-        text: "highcharts-demo"
+        text: "child-highcharts-demo"
       },
       credits: {
         enabled: false

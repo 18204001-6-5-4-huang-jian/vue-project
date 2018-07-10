@@ -28,24 +28,22 @@ const instance = axios.create({
   }
 })
 
+//携带token
 instance.interceptors.request.use(function (config) {
-  //携带token
   config.headers['token'] = localStorage.getItem('token');
   return config;
 }, function (error) {
   return Promise.reject(error);
 })
 
-//判断error设置拦截器
+//判断Error设置拦截器
 instance.interceptors.response.use(function (response) {
   return response;
 }, function (error) {
   if (error.response.status === 401) {
     message.error('您未经授权,请重新登录');
-    this.props.history.push({
-      pathname: '/login'
-    })
-  }
+    this.$router.push('/login');
+   }
 })
 
 /**

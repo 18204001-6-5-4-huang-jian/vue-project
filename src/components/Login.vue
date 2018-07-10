@@ -44,7 +44,6 @@ export default {
         //   }
         // });
       } else if (!result.data.success) {
-        //this.$message(`对不起,${result.data.message}`);
         this.$message({
           showClose: false,
           center: true,
