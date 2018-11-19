@@ -1,10 +1,9 @@
 /*
   @description Api接口
   @author jhuang
-  @date 2018-5-31
+  @date 2018-5-28
 */
 import axios from 'axios'
-// import pg from 'path-to-regexp'
 import qs from 'qs'
 // import qs from 'querystring'
 const base_url = process.env.NODE_ENV === 'development' ? 'http://localhost:9999/airui' : 'http://localhost:9999/airui'
@@ -15,14 +14,10 @@ const base_url = process.env.NODE_ENV === 'development' ? 'http://localhost:9999
  * @param {*} params
  * @private
  */
-// function toPath(regex, params) {
-//   if (Object.prototype.toString.call(params) === '[object Object]') throw new TypeError('params should be an object')
-//   return pg.compile(regex)(params)
-// }
-
 const instance = axios.create({
   timeout: 5000,
   baseURL: base_url,
+  withCredentials:false,//跨域不需要凭证
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
   }
@@ -36,14 +31,14 @@ instance.interceptors.request.use(function (config) {
   return Promise.reject(error);
 })
 
-//判断Error设置拦截器
+//判断error设置拦截器
 instance.interceptors.response.use(function (response) {
   return response;
 }, function (error) {
   if (error.response.status === 401) {
     message.error('您未经授权,请重新登录');
     this.$router.push('/login');
-   }
+  }
 })
 
 /**
