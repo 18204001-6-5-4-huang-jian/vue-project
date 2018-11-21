@@ -1,10 +1,17 @@
 <template>
-   <div :id="id" :option="option"></div>
+<el-row>
+  <el-col :span="12">
+    <div :id="id" :option="option"></div>
+  </el-col>
+  <el-col :span="12">
+    <div :id="id1" :option="option1"></div>
+  </el-col>
+</el-row>
 </template>
 <script>
 import HighCharts from "highcharts";
 export default {
-  name: "chart",
+  name: "Chart",
   data() {
     return {
       data: "jhuang"
@@ -16,15 +23,28 @@ export default {
       type: String,
       default: ""
     },
+    id1: {
+      type: String,
+      default: ""
+    },
     option: {
+      type: Object,
+      default: {}
+    },
+     option1: {
       type: Object,
       default: {}
     }
   },
   mounted() {
+    console.log(this.id,this.id1);
+    console.log(this.option,this.option1)
     HighCharts.chart(this.id, this.option);
+    HighCharts.chart(this.id1, this.option1);
   },
-  methods: {}
+  methods: {
+
+  }
 };
 </script>
 <style scoped>

@@ -5,27 +5,27 @@ import Login from '../components/Login'
 import Home from '../components/Home'
 import Default from '../components/Default'
 Vue.use(Router)
-
+const routes = [
+      {
+        path: '/',
+        // redirect: 'Login'
+        component: Login
+      },
+      {
+        path: '/login',
+        component: Login
+      },
+      {
+        path: '/home/:id',
+        component: Home
+      },
+      {
+        path:'/default',
+        component:Default
+      }
+]
 const router  = new Router({
-  routes: [
-    {
-      path: '/',
-      // redirect: 'Login'
-      component: Login
-    },
-    {
-      path: '/login',
-      component: Login
-    },
-    {
-      path: '/home/:id',
-      component: Home
-    },
-    {
-      path:'/default',
-      component:Default
-    }
-  ],
+  routes,
   mode: 'hash', //default: hash ,history
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition && to.meta.keepAlive) {

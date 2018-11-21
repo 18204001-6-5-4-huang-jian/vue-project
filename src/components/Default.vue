@@ -1,10 +1,15 @@
 <template>
-<el-row :gutter="20">
-  <el-col :span="6"><div class="grid-content bg-purple">2</div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple">2</div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple">2</div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple">2</div></el-col>
-</el-row>
+<el-container>
+  <el-header>Huang Jian</el-header>
+  <el-main>
+    <el-row :gutter="20">
+    <el-col :span="6"><div class="grid-content bg-purple">2</div></el-col>
+    <el-col :span="6"><div class="grid-content bg-purple">2</div></el-col>
+    <el-col :span="6"><div class="grid-content bg-purple">2</div></el-col>
+    <el-col :span="6"><div class="grid-content bg-purple">2</div></el-col>
+  </el-row>
+  </el-main>
+</el-container>
 </template>
 <script>
 export default {
@@ -24,7 +29,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
   .el-row {
     margin-bottom: 20px;
   }
@@ -52,6 +57,10 @@ export default {
   .row-bg {
     padding: 10px 0;
     background-color: #f9fafc;
+  }
+  .el-header{
+    line-height: 60px;
+    font-family: "Helvetica Neue";
   }
 </style>
 

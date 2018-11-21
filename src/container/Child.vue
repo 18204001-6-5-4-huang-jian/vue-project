@@ -1,8 +1,7 @@
 <template>
     <div class="child">
-        <p>{{data}}</p>
         <p>{{message | capitalize}}</p>
-        <button @click="sendParent">goPraent</button>
+        <el-button type="primary" round @click="sendParent">sendPraent</el-button>
     </div>
 </template>
 <script>
@@ -10,8 +9,8 @@ export default {
   name: "Child",
   data() {
     return {
-      data: "jhuang"
-    };
+       data:'Huang Jian'
+    }
   },
   props: {
     message: {
