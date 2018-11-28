@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // import Login from '@/components/Login'
-import Login from '../components/Login'
-import Home from '../components/Home'
-import Default from '../components/Default'
+//路由懒加载  减小打包体积
+const Login = () => import('../components/Login')
+const Home = () =>import('../components/Home')
+const Default = () => import ('../components/Default')
 Vue.use(Router)
 const routes = [
       {
