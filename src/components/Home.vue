@@ -1,5 +1,6 @@
 <template>
  <div>
+   <bread></bread>
    <el-row :gutter="20">
   <el-col :span="6"><div class="grid-content bg-purple">1</div></el-col>
   <el-col :span="6"><div class="grid-content bg-purple">2</div></el-col>
@@ -31,11 +32,13 @@
 import HighCharts from "highcharts";
 import child from "../container/Child";
 import chart from "../container/Chart";
+import bread from '../common/breadcrumb.vue'
 export default {
   name: "Home",
   components: {
     child,
-    chart
+    chart,
+    bread
   },
   data() {
     return {

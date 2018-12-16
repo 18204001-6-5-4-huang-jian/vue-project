@@ -10,19 +10,59 @@ const routes = [
       {
         path: '/',
         // redirect: 'Login'
-        component: Login
+        name:Login,
+        component: Login,
+        meta: {
+          title: '首页1',
+          breadcrumb:[
+            {
+              name:'Login',
+              path:'/login'
+            },
+          ]
+        },
       },
       {
         path: '/login',
-        component: Login
+        name:Login,
+        component: Login,
+        meta: {
+          title: '首页1',
+          breadcrumb:[
+            {
+              name:'Login',
+              path:'/ogin'
+            },
+          ]
+        },
       },
       {
         path: '/home/:id',
-        component: Home
+        name:Home,
+        component: Home,
+        meta: {
+          title: '首页2',
+          breadcrumb:[
+            {
+              name:'Home',
+              path:'/home/:id'
+            },
+          ]
+        },
       },
       {
         path:'/default',
-        component:Default
+        name:Default,
+        component:Default,
+        meta: {
+          title: '首页3',
+          breadcrumb:[
+            {
+              name:'Default',
+              path:'/default'
+            },
+          ]
+        },
       }
 ]
 const router  = new Router({
