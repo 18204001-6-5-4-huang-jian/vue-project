@@ -67,7 +67,9 @@ export default {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: url("../images/login-bg.jpg") no-repeat 50%;
+  background: url("../images/login-bg.jpg") no-repeat;
+  /* background-size:cover; */
+  background-size: 100%;
 }
 .login-box {
   width: 400px;

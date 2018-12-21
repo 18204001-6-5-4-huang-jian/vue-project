@@ -5,6 +5,7 @@ import Router from 'vue-router'
 const Login = () => import('../components/Login')
 const Home = () =>import('../components/Home')
 const Default = () => import ('../components/Default')
+const Notfind = () => import('../components/404')
 Vue.use(Router)
 const routes = [
       {
@@ -60,6 +61,20 @@ const routes = [
             {
               name:'Default',
               path:'/default'
+            },
+          ]
+        },
+      },
+      {
+        path:'*',
+        name:Notfind,
+        component:Notfind,
+        meta: {
+          title: '404页面',
+          breadcrumb:[
+            {
+              name:'Notfind',
+              path:'*'
             },
           ]
         },
