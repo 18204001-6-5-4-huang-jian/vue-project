@@ -1,6 +1,6 @@
 <template>
     <el-breadcrumb separator=">">
-    <el-breadcrumb-item :to="{path:'/login'}">{{this.$route.meta.title}}</el-breadcrumb-item>
+    <el-breadcrumb-item :to="{path:''}">{{this.$route.meta.title}}</el-breadcrumb-item>
      <el-breadcrumb-item v-for="(item,index) in $route.meta.breadcrumb" :key="index">{{item.name}}</el-breadcrumb-item>
 </el-breadcrumb>
 </template>

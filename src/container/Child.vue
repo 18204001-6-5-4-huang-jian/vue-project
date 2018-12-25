@@ -1,6 +1,7 @@
 <template>
     <div class="child">
         <p>{{message | capitalize}}</p>
+        <br>
         <el-button type="primary" round @click="sendParent">sendPraent</el-button>
     </div>
 </template>

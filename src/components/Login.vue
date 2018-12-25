@@ -81,6 +81,24 @@ export default {
   margin-top: -200px;
   margin-left: -200px;
   border-radius: 5px;
+  animation: changePosition 1.8s 1;
+	-webkit-animation:changePosition 1.8s 1; /*Safari and Chrome*/
+}
+@keyframes changePosition{
+  from{
+     top: 40%;
+  }
+  to{
+    top: 50%;
+  }
+}
+@-webkit-keyframes changePosition{
+  from{
+     top: 40%;
+  }
+  to{
+    top: 50%;
+  }
 }
 .login-title {
   color: #ffffff;

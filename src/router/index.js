@@ -14,7 +14,7 @@ const routes = [
         name:Login,
         component: Login,
         meta: {
-          title: '首页1',
+          title: 'login',
           breadcrumb:[
             {
               name:'Login',
@@ -28,7 +28,7 @@ const routes = [
         name:Login,
         component: Login,
         meta: {
-          title: '首页1',
+          title: 'login',
           breadcrumb:[
             {
               name:'Login',
@@ -42,10 +42,10 @@ const routes = [
         name:Home,
         component: Home,
         meta: {
-          title: '首页2',
+          title: 'Home',
           breadcrumb:[
             {
-              name:'Home',
+              name:'首页',
               path:'/home/:id'
             },
           ]
@@ -56,10 +56,10 @@ const routes = [
         name:Default,
         component:Default,
         meta: {
-          title: '首页3',
+          title: 'Default',
           breadcrumb:[
             {
-              name:'Default',
+              name:'默认',
               path:'/default'
             },
           ]
@@ -73,7 +73,7 @@ const routes = [
           title: '404页面',
           breadcrumb:[
             {
-              name:'Notfind',
+              name:'404',
               path:'*'
             },
           ]

@@ -24,7 +24,7 @@
   <el-row>
     <el-button type="success" @click="changeShow">切换</el-button>
   </el-row>
-    <child :message="jhuang" @listenTochild="listenTochildHandle"></child>
+    <child :message="text" @listenTochild="listenTochildHandle"></child>
     <chart :id='id' :option='option' :id1="id1" :option1="option1"></chart>
  </div>
 </template>
@@ -42,7 +42,7 @@ export default {
   },
   data() {
     return {
-      jhuang: "demo",
+      text: "huang jian",
       show: 0,
       data: [
         { name: "主要按钮", type: "primary" },
@@ -191,8 +191,8 @@ export default {
   },
   watch: {
     show(newval, oldval) {
-      console.log(newval);
-      console.log(oldval);
+      // console.log(newval);
+      // console.log(oldval);
     }
   },
   methods: {
@@ -226,7 +226,7 @@ export default {
   color: deeppink;
 }
 .show2 {
-  color: #ffffff;
+  color: #000;
 }
   .el-row {
     margin-bottom: 20px;

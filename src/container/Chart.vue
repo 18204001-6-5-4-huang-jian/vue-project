@@ -42,6 +42,10 @@ export default {
     HighCharts.chart(this.id, this.option);
     HighCharts.chart(this.id1, this.option1);
   },
+  updated(){
+    HighCharts.chart(this.id, this.option);
+    HighCharts.chart(this.id1, this.option1);
+  },
   methods: {
 
   }
