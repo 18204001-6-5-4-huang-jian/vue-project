@@ -8,13 +8,14 @@
   <el-col :span="6"><div class="grid-content bg-purple">4</div></el-col>
 </el-row>
    <el-row>
-    <el-button type="success" @click="increment">+</el-button>
-    <el-button type="success" @click="decrement">-</el-button>
+    <el-button type="success" @click="increment()">+</el-button>
+    <el-button type="success" @click="decrement()">-</el-button>
    </el-row>
    <el-row>
-   <el-button type="success" :class="{show1:show==0,show2:show==1}">{{count}}</el-button>
+   <el-button type="success" :class="{'show1':show == 0,'show2':show == 1}">{{count}}</el-button>
    </el-row>
    <el-row v-if="show == 0">
+      <el-button>默认按钮</el-button>
       <el-button type="primary" >主要按钮</el-button>
       <el-button type="success" >成功按钮</el-button>
       <el-button type="info" >信息按钮</el-button>
@@ -22,10 +23,10 @@
       <el-button type="danger" >危险按钮</el-button>
   </el-row>
   <el-row>
-    <el-button type="success" @click="changeShow">切换</el-button>
+    <el-button type="success" @click="changeShow()">切换</el-button>
   </el-row>
     <child :message="text" @listenTochild="listenTochildHandle"></child>
-    <chart :id='id' :option='option' :id1="id1" :option1="option1"></chart>
+    <chart :id='id' :option='option' :id1='id1' :option1='option1'></chart>
  </div>
 </template>
 <script>
@@ -42,7 +43,7 @@ export default {
   },
   data() {
     return {
-      text: "huang jian",
+      text: "huang",
       show: 0,
       data: [
         { name: "主要按钮", type: "primary" },
@@ -182,7 +183,8 @@ export default {
     };
   },
   mounted() {
-    console.log(this.$route.params.id);
+    // console.log(this.$route.params.id);
+    // console.log(this.$store);
   },
   computed: {
     count() {
@@ -248,7 +250,6 @@ export default {
   }
   .grid-content {
     border-radius: 4px;
-    /* min-height: 36px; */
     height: 40px;
     line-height: 40px;
     font-weight: bold;

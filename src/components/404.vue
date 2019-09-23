@@ -1,7 +1,7 @@
 <template>
     <div class="404-container">
         <bread></bread>
-        <img src="../images/404.png" />
+        <img src="../images/404.png" alt=""/>
     </div>
 </template>
 <script>

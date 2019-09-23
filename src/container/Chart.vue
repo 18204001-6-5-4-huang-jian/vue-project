@@ -37,8 +37,8 @@ export default {
     }
   },
   mounted() {
-    console.log(this.id,this.id1);
-    console.log(this.option,this.option1)
+    // console.log(this.id,this.id1);
+    // console.log(this.option,this.option1)
     HighCharts.chart(this.id, this.option);
     HighCharts.chart(this.id1, this.option1);
   },

@@ -11,7 +11,7 @@ const routes = [
       {
         path: '/',
         // redirect: 'Login'
-        name:Login,
+        name:'Login',
         component: Login,
         meta: {
           title: 'login',
@@ -25,7 +25,7 @@ const routes = [
       },
       {
         path: '/login',
-        name:Login,
+        name:'Login',
         component: Login,
         meta: {
           title: 'login',
@@ -39,7 +39,7 @@ const routes = [
       },
       {
         path: '/home/:id',
-        name:Home,
+        name:'Home',
         component: Home,
         meta: {
           title: 'Home',
@@ -53,7 +53,7 @@ const routes = [
       },
       {
         path:'/default',
-        name:Default,
+        name:'Default',
         component:Default,
         meta: {
           title: 'Default',
@@ -67,7 +67,7 @@ const routes = [
       },
       {
         path:'*',
-        name:Notfind,
+        name:'Notfind',
         component:Notfind,
         meta: {
           title: '404页面',

@@ -2,8 +2,8 @@
  <div class="login-container">
  <div class="login-box">
    <p class="login-title" v-text="'Welcome'"></p>
-   <input type="text" ref="input" v-model="email" @keyup.enter="goHome" @change="changeHandle($event)"/>
-   <button class="login-btn" @click="goHome">{{login}}</button>
+   <el-input v-model="email" style="width:200px;" ref="input" placeholder=""  @keyup.enter.native="goHome" @input="changeHandle()"></el-input>
+   <el-button type="primary" class="login-btn" @click="goHome">{{login}}</el-button>
  </div>
  </div>
 </template>
@@ -25,7 +25,7 @@ export default {
   methods: {
     async goHome() {
       const result = await userLogin({
-        email: "jhuang@abcft.com",
+        email:this.email,
         password: md5(123456)
       });
       console.log(result);
@@ -36,13 +36,12 @@ export default {
           message: "请求失败"
         });
       } else if (result.data.success) {
-        this.$router.push(`/home/${555}`);
-        // this.$router.push({
-        //   path: `/home/${555}`,·
-        //   query: {
-        //     keyword:this.email
-        //   }
-        // });
+        this.$router.push({
+          path: `/home/${555}`,
+          query: {
+             email:this.email
+          }
+        });
       } else if (!result.data.success) {
         this.$message({
           showClose: false,
@@ -51,9 +50,8 @@ export default {
         });
       }
     },
-    changeHandle(e) {
-      // console.log(e.target.value);
-      this.email = e.target.value;
+    changeHandle() {
+      console.log(this.email);
     }
   }
 };
@@ -68,8 +66,7 @@ export default {
   width: 100%;
   height: 100%;
   background: url("../images/login-bg.jpg") no-repeat;
-  /* background-size:cover; */
-  background-size: 100%;
+  background-size:cover;
 }
 .login-box {
   width: 400px;
@@ -102,7 +99,7 @@ export default {
 }
 .login-title {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 24px;
   margin-top: 20px;
   font-family: "微软雅黑";
   user-select: none;
@@ -111,13 +108,9 @@ export default {
   -ms-user-select: none;
 }
 .login-btn {
-  margin-top: 300px;
-  height: 30px;
-  line-height: 30px;
-  padding: 0 10px;
+  margin-top: 240px;
   outline: none;
   border: 1px solid #ffffff;
-  background: #000000;
   color: #ffffff;
   cursor: pointer;
   border-radius: 5px;
