@@ -26,11 +26,16 @@ module.exports = {
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
     cssSourceMap: true,
-    //dev设置代理解决dev环境的跨域
+    //设置代理解决dev环境的跨域
     proxyTable: {
-    '/airui':{
-        target: 'http://10.12.10.10:9380',//代理接口的位置
-        changeOrigin: true //允许跨域，如果这不写，调用接口接口时会有跨域错误说缺少请求头
+    //api是本地路径和后端接口路径的匹配前缀
+    '/api':{
+        //target设置的就是将要请求数据的域名,这个设置是包含在api这个对象之中的,因此在我们使用本地服务做代理的时候,在请求的接口url之前,也应该拼接上这个/api
+        target: 'http://192.168.1.11:8080',
+        changeOrigin: true, //允许跨域，如果这不写，调用接口接口时会有跨域错误说缺少请求头
+        pathRewrite:{
+          '^/api': ''//重写接口,后面可以使重写的新路径
+        }
       }
     }
   },

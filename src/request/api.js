@@ -6,8 +6,9 @@
 import axios from 'axios'
 import qs from 'qs'
 // import qs from 'querystring'
-const base_url = process.env.NODE_ENV === 'development' ? 'http://localhost:9999/airui' : 'http://localhost:9999/airui'
 
+// 开发环境需要加前缀api，测试和生产不需要加，故在base_url中添加api
+const base_url = process.env.NODE_ENV === 'development' ? 'http://localhost:9999/api':process.env.NODE_ENV === 'production' ? '':''
 /**
  * @description 将路径编辑成路由
  * @param {*} regex
@@ -49,7 +50,7 @@ instance.interceptors.response.use(function (response) {
 export const userLogin = function (userinfo) {
   return instance.request({
     method: 'POST',
-    url: '/v1/account/login',
+    url: '/airui/v1/account/login',
     data: qs.stringify(userinfo)
   })
 }

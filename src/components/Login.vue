@@ -21,6 +21,7 @@ export default {
   mounted() {
     // console.log(process.env.NODE_ENV);
     // console.log(this.$refs.input.value);
+    // console.log(process.env.NODE_ENV)
   },
   methods: {
     async goHome() {
