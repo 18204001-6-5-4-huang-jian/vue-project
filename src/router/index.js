@@ -9,32 +9,14 @@ Vue.use(Router)
 const routes = [
       {
         path: '/',
-        // redirect: 'Login'
+        redirect: '/',
         name:'Login',
         component: Login,
-        meta: {
-          title: 'login',
-          breadcrumb:[
-            {
-              name:'Login',
-              path:'/login'
-            },
-          ]
-        },
       },
       {
         path: '/login',
         name:'Login',
         component: Login,
-        meta: {
-          title: 'login',
-          breadcrumb:[
-            {
-              name:'Login',
-              path:'/ogin'
-            },
-          ]
-        },
       },
       {
         // path: '/home/:id',
