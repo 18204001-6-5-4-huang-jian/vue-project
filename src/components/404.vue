@@ -5,7 +5,6 @@
     </div>
 </template>
 <script>
-import bread from '../common/breadcrumb.vue'
 export default {
     data(){
         return{
@@ -13,7 +12,7 @@ export default {
         }
     },
     components:{
-        bread
+        
     }
 }
 </script>

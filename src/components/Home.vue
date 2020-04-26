@@ -33,13 +33,11 @@
 import HighCharts from "highcharts";
 import child from "../container/Child";
 import chart from "../container/Chart";
-import bread from '../common/breadcrumb.vue'
 export default {
   name: "Home",
   components: {
     child,
     chart,
-    bread
   },
   data() {
     return {

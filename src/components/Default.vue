@@ -21,7 +21,6 @@
 </el-container>
 </template>
 <script>
-import bread from '../common/breadcrumb.vue'
 export default {
     name:'Default',
     data() {
@@ -69,7 +68,7 @@ export default {
       }
     },
     components:{
-       bread
+
     },
     mounted() {
         

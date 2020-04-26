@@ -1,0 +1,254 @@
+/*
+ * @Author: Huang Jian 
+ * @Date: 2020-04-26 14:41:34 
+ * @Last Modified by:   Huang Jian 
+ * @Last Modified time: 2020-04-26 14:41:34 
+ */
+
+/* reset */
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  background: #eaeef1;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+  margin: 0;
+  padding: 0;
+}
+
+header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th {
+  text-align: left;
+  font-weight: normal;
+}
+
+html, body, fieldset, img, iframe, abbr {
+  border: 0;
+}
+
+i, cite, em, var, address, dfn {
+  font-style: normal;
+}
+
+[hidefocus], summary {
+  outline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+
+pre, code, kbd, samp {
+  font-family: inherit;
+}
+
+q:before, q:after {
+  content: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+label, summary {
+  cursor: default;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, em, strong, b {
+  font-weight: bold;
+}
+
+del, ins, u, s, a, a:hover {
+  text-decoration: none;
+}
+
+/* 表格公共样式 */
+.el-table th {
+  background: #f7fafc !important;
+  height: 40px;
+  color: #444;
+  font-weight: 400;
+}
+
+.el-table th, .el-table td {
+  /*text-align: left !important;*/
+}
+
+/*分页样式*/
+.el-pagination {
+  text-align: right;
+  margin-right: 10px;
+}
+
+/*滚动条*/
+.scroll {
+  scrollbar-face-color: #fff;
+  scrollbar-shadow-color: #fff;
+  scrollbar-highlight-color: #ccc;
+  scrollbar-3dlight-color: #fff;
+  scrollbar-arrow-color: #f00;
+  scrollbar-track-color: #fff;
+}
+
+/*滚动条*/
+::-webkit-scrollbar {
+  width: 4px;
+  height: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e9ebf2
+}
+
+::-webkit-scrollbar-thumb {
+  background: #61aae6;
+  border-radius: 6px
+}
+
+.form-report .el-form-item__label, .form-report .el-input__inner, .form-report .el-cascader__label, .form-report .el-radio__label, .form-report .el-checkbox__label, .form-report .el-textarea__inner {
+  /* font-weight: bold; */
+  font-size: 16px;
+}
+
+.form-report .el-input__inner, .form-report .el-textarea__inner {
+  background: transparent !important;
+  border: 1px solid #ccc !important;
+  border-radius: 0 !important;
+}
+
+.form-report .el-checkbox {
+  margin-left: 0 !important;
+  margin-right: 30px !important;
+}
+
+.el-button {
+  border-radius: 0 !important;
+}
+
+.form-report .el-input.is-disabled .el-input__inner, .form-report .el-textarea.is-disabled .el-textarea__inner {
+  background: transparent !important;
+  border: 1px solid #ccc !important;
+}
+
+.form-report .repeat-detail-cntainer-time .input .el-input__inner {
+  border: 0 !important;
+}
+
+.form-report .el-checkbox {
+  margin-left: 0 !important;
+  margin-right: 30px;
+}
+
+/* 表单disabled样式 */
+.el-input.is-disabled .el-input__inner, .el-textarea.is-disabled .el-textarea__inner {
+  background: #ffffff !important;
+  color: #606266 !important;
+}
+
+.el-radio__input.is-disabled.is-checked + span.el-radio__label {
+  color: #409EFF !important;
+}
+
+.el-radio__input.is-disabled.is-checked .el-radio__inner {
+  background-color: #409EFF !important;
+  border-color: #409EFF !important;
+}
+
+.el-radio__input.is-disabled.is-checked .el-radio__inner::after {
+  background-color: #f5f7fa !important;
+}
+
+.el-input.is-disabled .el-input__inner {
+  background-color: #fff !important;
+  border-color: #dcdfe6 !important;
+  color: #606266 !important;
+  cursor: not-allowed !important;
+}
+
+.el-input.is-disabled.grayInput .el-input__inner {
+  background: #ededed !important;
+}
+
+.el-textarea.is-disabled .el-textarea__inner {
+  background-color: #fff !important;
+  border-color: #dcdfe6 !important;
+  color: #606266 !important;
+  cursor: not-allowed !important;
+}
+
+.el-checkbox__input.is-disabled.is-checked + span.el-checkbox__label {
+  color: #409EFF !important;
+  cursor: not-allowed !important;
+}
+
+.el-checkbox__input.is-disabled.is-checked .el-checkbox__inner {
+  background-color: #409EFF !important;
+  border-color: #409EFF !important;
+}
+
+.el-checkbox__input.is-disabled.is-checked .el-checkbox__inner::after {
+  border-color: #fff !important;
+}
+
+.el-row .el-textarea__inner {
+  font-family: Microsoft YaHei, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Arial, sans-serif;
+}
+
+.el-input__inner, .el-textarea__inner {
+  border-radius: 0;
+}
+
+
+.el-button, .el-input__inner, .el-range-input {
+  font-family: Microsoft YaHei, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Arial, sans-serif;
+}
+
+.breadcrumb .el-breadcrumb__item:last-child .el-breadcrumb__inner {
+  font-weight: normal;
+  color: #000;
+}
+
+.el-form-item__error {
+  color: #A20000 !important;
+}
+
+.warnField .el-input__inner, .form-report .warnField.el-checkbox-group, .warnField.el-checkbox-group {
+  border: 2px solid #E24A01 !important;
+  padding-left: 5px;
+}
+
+.warnField .el-select .el-input .el-select__caret {
+  color: #E24A01 !important
+}
+
+.errorField .el-input__inner, .form-report .errorField.el-checkbox-group {
+  border: 2px solid #A20000 !important;
+}
+
+.errorField .el-select .el-input .el-select__caret {
+  color: #A20000 !important
+}
+
+/* 修改不可用多选框样式 */
+.el-checkbox__input.is-disabled.is-indeterminate .el-checkbox__inner {
+  background-color: #409EFF !important;
+  border-color: #409EFF !important;;
+}

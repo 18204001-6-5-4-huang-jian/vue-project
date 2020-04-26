@@ -1,7 +1,7 @@
 <template>
     <el-breadcrumb separator=">">
-    <el-breadcrumb-item :to="{path:''}">{{this.$route.meta.title}}</el-breadcrumb-item>
-     <el-breadcrumb-item v-for="(item,index) in $route.meta.breadcrumb" :key="index">{{item.name}}</el-breadcrumb-item>
+    <el-breadcrumb-item :to="{path:''}">{{$route.meta.title}}</el-breadcrumb-item>
+     <el-breadcrumb-item v-for="(item,index) in $route.meta.breadcrumb" :to="item.path" :key="index">{{item.name}}</el-breadcrumb-item>
 </el-breadcrumb>
 </template>
 <script>
@@ -12,7 +12,7 @@ export default {
         }
     },
     mounted() {
-       console.log(this.$route.path)
+       console.log(this.$route)
     },
 }
 </script>

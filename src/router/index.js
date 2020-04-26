@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import Login from '@/components/Login'
 //路由懒加载  减小打包体积
 const Login = () => import('../components/Login')
 const Home = () =>import('../components/Home')
@@ -38,7 +37,8 @@ const routes = [
         },
       },
       {
-        path: '/home/:id',
+        // path: '/home/:id',
+        path: '/home',
         name:'Home',
         component: Home,
         meta: {
@@ -46,7 +46,8 @@ const routes = [
           breadcrumb:[
             {
               name:'首页',
-              path:'/home/:id'
+              // path:'/home/:id'
+              path:'/home'
             },
           ]
         },
