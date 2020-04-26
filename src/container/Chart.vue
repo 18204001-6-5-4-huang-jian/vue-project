@@ -9,7 +9,6 @@
 </el-row>
 </template>
 <script>
-import HighCharts from "highcharts";
 export default {
   name: "Chart",
   data() {
@@ -39,12 +38,12 @@ export default {
   mounted() {
     // console.log(this.id,this.id1);
     // console.log(this.option,this.option1)
-    HighCharts.chart(this.id, this.option);
-    HighCharts.chart(this.id1, this.option1);
+    this.$HighCharts.chart(this.id, this.option);
+    this.$HighCharts.chart(this.id1, this.option1);
   },
   updated(){
-    HighCharts.chart(this.id, this.option);
-    HighCharts.chart(this.id1, this.option1);
+    this.$HighCharts.chart(this.id, this.option);
+    this.$HighCharts.chart(this.id1, this.option1);
   },
   methods: {
 

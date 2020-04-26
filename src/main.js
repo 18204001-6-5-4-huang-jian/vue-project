@@ -8,11 +8,12 @@ import App from '@/App'
 import router from '@/router'
 import store from '@/store/store'
 //highcharts的引入
-import VueHighcharts from 'vue-highcharts';
+import HighCharts from 'highcharts';
 import bread from '@/common/breadcrumb.vue'
 Vue.use(ElementUI)
-Vue.use(VueHighcharts)
 Vue.component("bread", bread);//全局自定义组件
+// Vue.use(HighCharts)
+Vue.prototype.$HighCharts = HighCharts // 将HighCharts挂到vue原型上
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
