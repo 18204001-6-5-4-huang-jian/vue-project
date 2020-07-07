@@ -18,9 +18,14 @@
       :props="defaultProps">
     </el-tree>
   </el-main>
+  <div>
+    <div id='code'></div>
+    <canvas id="canvas"></canvas>
+  </div>
 </el-container>
 </template>
 <script>
+import QRCode from 'qrcode'
 export default {
     name:'Default',
     data() {
@@ -64,19 +69,24 @@ export default {
           children: 'children',
           label: 'label'
         },
-        checkedArray:[5,6]
+        checkedArray:[5,6],
+        codes:''
       }
     },
     components:{
-
+       QRCode:QRCode
     },
     mounted() {
-        
-    },
-    computed:{
-      
+        this.useqrcode();
     },
     methods:{
+      useqrcode(){
+        var canvas = document.getElementById('canvas')
+        QRCode.toCanvas(canvas, 'http://211.103.176.186:30002/page/#/', function (error) {
+          if (error) console.error(error)
+          console.log('success!');
+        })
+      }
 
     }
 }
