@@ -17,7 +17,7 @@
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "element-ui": "^2.4.0",
-    "highcharts": "^6.1.0",
+    "highcharts": "^9.0.0",
     "md5": "^2.2.1",
     "path-to-regexp": "^2.2.1",
     "qrcode": "^1.4.4",
